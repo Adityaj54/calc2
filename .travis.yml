@@ -9,5 +9,5 @@ script:
 
 branches:
   only:
-    - main
+    - Cla2_part4
     - development
