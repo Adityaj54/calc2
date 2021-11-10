@@ -1,25 +1,22 @@
 """ This is the increment function"""
+
+def inc(x_value):
+    """ Increment Function adds one to the x_value"""
+    return x_value + 1
+
 class Calculator:
     """ This is the Calculator class"""
-    @staticmethod
-    def add_number(value_a,value_b):
-        """ adds numbers"""
-        return value_a + value_b
 
-    @staticmethod
-    def subtract_number( value_a ,value_b):
-        """ subtract number two numbers"""
-        return value_a - value_b
+    result = 0
+    def get_result(self):
+        """ Get Result of Calculation"""
+        return self.result
 
-    @staticmethod
-    def multiply_numbers(value_a, value_b):
-        """ multiply two numbers and return the result"""
-        return value_a * value_b
-
-    @staticmethod
-    def divide_numbers(value_a , value_b):
-        """ divide two numbers"""
-        try:
-            return value_a / value_b
-        except ZeroDivisionError as err:
-            raise ZeroDivisionError from err
+    def add_number(self, value_a):
+        """ adds number to result"""
+        self.result = self.result + value_a
+        return self.result
+    def subtract_number(self, value_a):
+        """ subtract number from result"""
+        self.result = self.result - value_a
+        return self.result
