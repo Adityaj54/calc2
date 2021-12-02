@@ -8,6 +8,7 @@ def clear_history_fixture():
     """define a function that will run each time you pass it to a test, it is called a fixture"""
     # pylint: disable=redefined-outer-name
     Calculations.clear_history()
+    
 @pytest.fixture
 def setup_addition_calculation_fixture():
     """define a function that will run each time you pass it to a test, it is called a fixture"""
@@ -37,12 +38,13 @@ def test_get_calculation(clear_history_fixture, setup_addition_calculation_fixtu
 def test_get_calculation_last(clear_history_fixture, setup_addition_calculation_fixture):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.get_last_calculation().get_result() == 3
+    assert Calculations.get_last_calculation_object().get_result() == 3
 
 def test_get_calculation_first(clear_history_fixture, setup_addition_calculation_fixture):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculations.get_first_calculation().get_result() == 3
+
 def test_history_count(clear_history_fixture, setup_addition_calculation_fixture):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
