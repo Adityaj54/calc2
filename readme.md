@@ -8,9 +8,9 @@ To run tests, Lint, and Coverage report use this command:
 
 pytest  --pylint --cov
 
-![Screenshot](screenshot.png)
+![Screenshot](1.png)
 
-![Screenshot](screenshot.png)
+![Screenshot](2.png)
 
 .pylintrc is the config for pylint
 .coveragerc is the config for coverage
