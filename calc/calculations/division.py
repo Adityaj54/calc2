@@ -1,4 +1,6 @@
+""" THIS IS THE DIVISION CLASS"""
 from calc.calculations.calculation import Calculation
+
 
 class Division(Calculation):
     """ calculation division class"""
@@ -12,6 +14,3 @@ class Division(Calculation):
             except ZeroDivisionError as err:
                 raise ZeroDivisionError from err
         return result
-
-
-

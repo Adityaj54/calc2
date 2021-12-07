@@ -1,6 +1,7 @@
 """Testing Subtraction"""
-from calc.calculations.division import Division
 import pytest
+from calc.calculations.division import Division
+
 
 
 
@@ -23,6 +24,3 @@ def test_calculation_division_err():
     # Assert
     with pytest.raises(ZeroDivisionError):
         division.get_result()
-
-
-
