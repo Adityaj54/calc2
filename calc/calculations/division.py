@@ -12,5 +12,6 @@ class Division(Calculation):
             try:
                 result /= i
             except ZeroDivisionError as err:
+                return err
                 raise ZeroDivisionError from err
         return result

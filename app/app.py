@@ -2,6 +2,7 @@
 from flask import Flask, request, flash
 from flask import render_template
 from calc.calculator import Calculator
+from calc.calculations.writeresults import Results
 
 app = Flask(__name__)
 app.secret_key = 'f3cfe9ed8fae309f02079dbf'
@@ -26,6 +27,7 @@ def basicform():
         getattr(Calculator, operation)(my_tuple)
         result = str(Calculator.get_last_result_value())
         flash(f'Operation {operation} Successfull ')
+        Results.write_results(value1,value2,result,operation)
         return render_template('result.html',value1=value1, value2=value2, operation=operation, result=result)
     # Displays the form because if it isn't a post it is a get request
     else:
@@ -46,3 +48,9 @@ def good_calc(value1,value2):
     Calculator.addition(my_tuple)
     response = "The result of the calculation is: " + str(Calculator.get_last_result_value()) + '<a href="/"> back</a>'
     return response
+
+@app.route("/results")
+def display_results():
+    """bad calc Route Response"""
+    return render_template('table.html',values = Results.display_results())
+
