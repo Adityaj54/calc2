@@ -1,0 +1,106 @@
+@font-face{
+    src: url("../../../../../WebstormProjects/IS601Project1/public_html/fonts/Roboto/Roboto-Light.ttf");
+    font-family:'Roboto';
+
+}
+.grw-font{
+    font-size: 19px;
+    line-height: 32px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-family: 'Roboto', sans-serif;
+}
+#grw-table-font{
+    font-size: 19px;
+    line-height: 32px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-family: 'Roboto', sans-serif;
+}
+.grw-nav-font{
+    font-size: 4px;
+    line-height: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+custom-mark{
+    background-color: azure;
+    text-underline: black;
+    font-style: italic;
+}
+
+/** Small Devices Landscape phone **/
+@media (min-width: 576px) {
+
+}
+
+/** Medium Devices Tablets **/
+@media (min-width: 768px) {
+
+}
+
+/** Desktop **/
+@media (min-width: 992px) {
+}
+
+/** Large Desktop **/
+@media (min-width: 1200px) {
+
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+a.btn-first{
+    background-color: darkorange;
+    color: black;
+
+}
+a.btn-second{
+    background-color: darkorange;
+    color: black;
+
+}
+a.btn:hover{
+    background-color: darkorange;
+    color: black;
+    box-shadow: 5px 5px 10px #999;
+    transition: 0.3s
+}
+.black{
+    color: black;
+}
+
+p.btn-primary{
+    background-color: grey;
+}
+p.myBtn{
+    background-color: grey;
+}
+p.myBtn1{
+    background-color: grey;
+}
+#more {
+    display: none;
+}
+#more1{
+    display: none;
+}
+center{
+    align-content: center;
+}
+.left{
+    text-align: start;
+}

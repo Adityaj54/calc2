@@ -1,0 +1,16 @@
+body {
+font-size: 200%;
+}
+
+code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+

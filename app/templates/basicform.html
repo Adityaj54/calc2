@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+
+    </style>
+{% endblock %}
+{% block content %}
+
+    <h1>HTML Form</h1>
+    <style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+</style>
+
+    <form action="/basicform" method="POST">
+        <label for="value1">Value 1:</label><br>
+        <input type="text" id="value1" name="value1" value="1"><br>
+        <label for="value2">Value 2:</label><br>
+        <input type="text" id="value2" name="value2" value="2"><br>
+        <fieldset>
+        <legend>Operation</legend>
+          <div>
+            <input type="radio" name="operation" id="addition" value="add_numbers" checked>
+            <label for="addition">Addition</label>
+          </div>
+          <div>
+            <input type="radio" name="operation" id="subtraction" value="subtract_numbers">
+            <label for="subtraction">Subtraction</label>
+          </div>
+          <div>
+            <input type="radio" name="operation" id="multiplication" value="multiply_numbers">
+            <label for="multiplication">Multiplication</label>
+          </div>
+            <div>
+            <input type="radio" name="operation" id="divison" value="divide_numbers">
+            <label for="divison">Divison</label>
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+<form action="/results" > <!-- or method="post" -->
+        <input type="submit" value="Get Results" >
+    </form>
+{% endblock %}

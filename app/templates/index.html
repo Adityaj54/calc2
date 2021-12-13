@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <!-- Hero Image and Hero Text-->
+    <div class="hero-image" >
+        <div class="hero-text">
+            <h1
+                    style="font-size:50px; color: white">We all are connected !!</h1>
+            <p>IS601 Awesome</p>
+
+            <image style="height:25px" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="photo credit image"/>
+            <h5 class="white">
+
+                "The world wide web" by frankieleon is licensed under CC BY 2.0</h5>
+        </div>
+    </div>
+
+
+    <!-- Contents Start-->
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="/g" class="">
+                <h3>Tips Pylint / Glossary</h3>
+                <p> Pylint is a tool that checks for errors in Python code and it enforces the a coding standard,
+                    It can recommend suggestions about how particular block can be refactored and can offer you details about code’s complexity. </p></a>
+        </div>
+        <div class="col-sm-4">
+            <a
+                    href="/aaa" class="">
+                <h3>AAA testing </h3>
+                <p>Unit testing involves testing individual components of the software program or application.
+                    The main purpose behind this is to check that all the individual parts are working as intended.
+                </p></a>
+
+        </div>
+        <div class="col-sm-4">
+            <a
+                    href="/oop" class="">
+                <h3>Principles of object oriented programming</h3>
+                <p> Object-Oriented Programming System (OOPs) is a programming concept that works on the principles of abstraction,
+                    encapsulation, inheritance, and polymorphism.
+                    It allows users to create objects they want and create methods to handle those objects.
+
+                </p></a>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <a
+                    href="/sep" class="">
+                <h3>Separation of Concerns</h3>
+                <p>
+                    Separation of concerns is a software architecture design pattern/principle for separating an application into distinct sections, so each section addresses a separate concern. At its essence, Separation of concerns is about order.
+                </p></a>
+
+        </div>
+        <div class="col-sm-4">
+            <a href="/tcp" class="">
+                <h3>TCP/IP</h3>
+                <p> In 1973, Dr. Vinton Cerf and Dr. Robert Kahn both developed procedures and rules for message passing and communication between networks called TCP/IP.  </p></a>
+        </div>
+        <div class="col-sm-4">
+            <a href="/arpanet" class="">
+                <h3>ARPANET </h3>
+                <p>In April 1971, the ARPANET had 18 mainframes computer interconnected across the country.Robert Metcalf was an MIT graduate student who connected MIT computers to ARPANET.</p></a>
+
+        </div>
+
+    </div>
+{% endblock %}

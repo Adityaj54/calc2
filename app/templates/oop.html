@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>PRINCIPLES OF OOPS</h1>
+
+                <br>
+                <h3>ABSTRACTION</h3>
+
+                <br>
+
+                <p class="grw-font">
+                    Applying abstraction means that each object should only expose a high-level mechanism for using it.
+                    This mechanism should hide internal implementation details. It should only reveal operations relevant for the other objects.
+                    <BR>
+                    Intuition:
+                    <br>
+                    Think — a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you have to do is put in coffee and press a button.
+
+                    Preferably, this mechanism should be easy to use and should rarely change over time. Think of it as a small set of public methods which any other class can call without “knowing” how they work.
+
+
+
+                    When we pass the tuple values to add_numbers in calculator class all we know is its doing addition and the internal logic is hidden.
+
+                    The Logic is in the class Addition, which takes the tuples and convert it into the list and add the values in the list and returns the result back.
+
+                </p>
+
+
+
+                <hr class="black">
+                <br>
+                <h3>POLYMORPHISM</h3>
+
+                <br>
+                <p class="grw-font">
+                    What is Polymorphism?<br>
+
+                    The word polymorphism means having many forms. In programming, polymorphism means the same function name (but different signatures) being used for different types.
+                    <br>
+                    In our Calculator we implemented polymorphism with the get_results() method,
+                    This method has same name in all the operational classes with different implimentations.
+
+
+                </p>
+
+                <hr class="black">
+                <br>
+                <h3>INHERITANCE</h3>
+
+                <br>
+                <p class="grw-font">
+                    Inheritance is the capability of one class to derive or inherit the properties from another class. The benefits of inheritance are:
+
+
+                    It represents real-world relationships well.
+                    It provides reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.
+                    It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.
+
+
+                    In our calculator, we use the Calculation as the super class and all the operations class will be child class,
+                    The child classes will inherit the super class variables which will give us  the list of values for the operations
+
+                </p>
+
+                <hr class="black">
+                <br>
+                <h3>ENCAPSULATION</h3>
+
+                <br>
+                <p class="grw-font">
+                    Encapsulation is one of the best Java OOPs concepts of wrapping the data and code. In this OOPs concept, the variables of a class are always hidden from other classes. It can only be accessed using the methods of their current class. For example – in school, a student cannot exist without a class.
+
+                </p>
+
+                <br>
+
+
+
+
+
+
+
+
+
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="text-center">
+                    <img class="img-fluid" height="200" width="200" src="{{ url_for('static', filename='images/oops.jpeg') }}"
+                         alt="image of TCPIP STACK">
+                    <p>OOPS CONCEPTS</p>
+
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}

@@ -1,0 +1,257 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>TIPS AND TRICKS TO USE PYLINT</h1>
+                <p class="grw-font">    Pylint is a tool that checks for errors in Python code and it enforces the a coding standard,
+                    It can recommend suggestions about how particular block can be refactored and can offer you details about code’s complexity.
+
+                    The basic thing to follow to pass the pylint test is to follow the PEP8 Style guide for writing code.
+
+                    PEP8 is a document gives coding conventions for the Python code comprising the standard library in the main Python distribution.
+
+                    PEP8 require the indentation to be 4 spaces and the maximum Line length should be less than 72 chars per Line, if the Line consist of the Comments or the docstring it is okay to limit it under 100 chars per line,
+                    The line break should always be before the Binary operator,
+                    Surround top-level function and class definitions with two blank lines.
+
+                <p class="grw-font">Method definitions inside a class are surrounded by a single blank line.
+
+                Write docstrings for all public modules, functions, classes, and methods. Docstrings are not necessary for non-public methods, but you should have a comment that describes what the method does. This comment should appear after the def line.
+
+
+                The Naming Style used is snake case lower_case_with_underscores
+
+                Class names should normally use the CapWords convention.
+                Function names should be lowercase, with words separated by underscores as necessary to improve readability.
+
+                Variable names follow the same convention as function names.
+
+                Annotations for module level variables, class and instance variables, and local variables should have a single space after the colon.
+
+                There should be no space before the colon.
+
+                If an assignment has a right hand side, then the equality sign should have exactly one space on both sides
+            </p>
+
+
+
+
+                <hr class="black">
+                <br>
+                <br>
+                <h1>GLOSSARY</h1>
+                <h3 style="padding-left: 20px">Factory Method</h3>
+                <br>
+
+                <p class="grw-font">
+                    Factory Method is a Creational Design Pattern that allows an interface or a class to create an object, but lets subclasses decide which class or object to instantiate. Using the Factory method, we have the best ways to create an object. Here, objects are created without exposing the logic to the client, and for creating the new type of object, the client uses the same common interface.
+                </p>
+
+
+
+                <h3 style="padding-left: 20px">Instantiation</h3>
+                <br>
+
+                <p class="grw-font">
+                    Instantiating a class is creating a copy of the class which inherits all class variables and methods.
+                    Instantiating a class in Python is simple. To instantiate a class,
+                    we simply call the class as if it were a function, passing the arguments that the
+                    __init__ method defines. The return value will be the newly created object.
+                    <code>
+                        class Foo():<br>
+                        def __init__(self,x,y):<br>
+                        print x+y<br>
+                        f = Foo(3,4)<br>
+
+
+                        f is the newly create object<br>
+
+                    </code>
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">CLASS & Object</h3>
+                <br>
+
+                <p class="grw-font">
+
+                    Python is an object-oriented programming language. Everything is in Python treated as an object, including variable, function, list, tuple, dictionary, set, etc. Every object belongs to its class. For example - An integer variable belongs to integer class. An object is a real-life entity. An object is the collection of various data and functions that operate on those data. An object contains the following properties.
+                    State - The attributes of an object represents its state. It also reflects the properties of an object.
+                    Behavior - The method of an object represents its behavior.
+                    Identity - Each object must be uniquely identified and allow interacting with the other objects.
+                    The class contains the user-defined data structure that holds the own data members such as variables, constructs, and member functions, which can be accessed by creating an object of the class.
+
+                    <code>
+                        class Person:<br>
+                        name = "John"<br>
+                        age = 24<br>
+                        def display (self):<br>
+                        print("Age: %d \nName: %s"%(self.age,self.name))<br>
+                        # Creating a emp instance of Employee class<br>
+                        per = Person()<br>
+                        per.display()<br>
+
+                    </code>
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">NAMESPACE</h3>
+                <br>
+
+                <p class="grw-font">
+                    A namespace is a collection of currently defined symbolic names along with information about the object that each name references. You can think of a namespace as a dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.
+                    In a Python program, there are four types of namespaces:
+                    1.	Built-In
+                    2.	Global
+                    3.	Enclosing
+                    4.	Local
+                    The built-in namespace contains the names of all of Python’s built-in objects. These are available at all times when Python is running.
+                    The global namespace contains any names defined at the level of the main program. Python creates the global namespace when the main program body starts, and it remains in existence until the interpreter terminates.
+                <code>
+                    def f(): <br>
+                    print('Start f()') <br>
+
+                    def g(): <br>
+                    print('Start g()') <br>
+                    print('End g()') <br>
+                    return <br>
+
+                    g() <br>
+
+                    print('End f()') <br>
+                    return <br>
+                    f() <br>
+
+                </code>
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">CONSTRUCTOR</h3>
+                <br>
+                <p class="grw-font">
+                    Constructor: Code that is executed each time an instance of the class is created.
+                    Default Constructor: A constructor with no parameters.
+
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">FIXTURE</h3>
+                <br>
+                <p class="grw-font">
+                    In testing, a fixture provides a defined, reliable and consistent context for the tests. This could include environment (for example a database configured with known parameters) or content (such as a dataset).
+                    Fixtures define the steps and data that constitute the arrange phase of a test (see Anatomy of a test). In pytest, they are functions you define that serve this purpose. They can also be used to define a test’s act phase; this is a powerful technique for designing more complex tests.
+
+                    <code>
+                        def greet(name: str) -> str:   <br>
+                        return "Hello, " + name
+
+                    </code>
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">TYPE CASTING</h3>
+                <br>
+                <p class="grw-font">
+                    Type casting is a method used to change the variables/ values declared in a certain data type into a different data type to match the operation required to be performed by the code snippet. In python, this feature can be accomplished by using constructor functions like int(), string(), float(), etc.
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">UNIT TESTING</h3>
+                <br>
+                <p class="grw-font">
+                    Unit Testing is the first level of software testing where the smallest testable parts of a software are tested. This is used to validate that each unit of the software performs as designed.
+
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">STATIC METHOD</h3>
+                <br>
+                <p class="grw-font">
+                    Static methods in Python are extremely similar to python class level methods, the difference being that a static method is bound to a class rather than the objects for that class.
+
+                    This means that a static method can be called without an object for that class. This also means that static methods cannot modify the state of an object as they are not bound to it.
+
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">CLASS METHOD</h3>
+                <br>
+                <p class="grw-font">
+                    The classmethod() is an inbuilt function in Python, which returns a class method for a given function.
+                    classmethod() methods are bound to a class rather than an object. Class methods can be called by both class and object. These methods can be called with a class or with an object.
+
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">FACADE</h3>
+                <br>
+                <p class="grw-font">
+                    Facade Method is a Structural Design pattern that provides a simpler unified interface to
+                    a more complex system. The word Facade means the face of a building or particularly an outer
+                    lying interface of a complex system, consists of several sub-systems. It is an essential part
+                    Gang of Four design patterns. It provides an easier way to access methods of the underlying systems
+                    by providing a single entry point.
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">PROPERTY</h3>
+                <br>
+                <p class="grw-font">
+                    The code defining the data managed by the class, such as CustomerName, OrderNumber, or EmailAddress
+                </p>
+                <br>
+                <h3 style="padding-left: 20px">METHOD</h3>
+                <br>
+                <p class="grw-font">
+                    The code defining the actions or behaviors of the class, such as Validate or CalculateTotal.
+                </p>
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="col-sm-2 sidenav">
+                <div class="text-center">
+                    <img class="img-fluid" height="400" width="400" src="{{ url_for('static', filename='images/pylint.png') }}"
+                         alt="image of TCPIP STACK">
+                    <p>PYLINT</p>
+
+
+                </div>
+            </div>
+        </div>
+{% endblock %}
