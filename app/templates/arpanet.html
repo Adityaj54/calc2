@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>What is ARPANET</h1>
+                <p class="grw-font">
+                    In April 1971, the ARPANET had 18 mainframes computer interconnected across the country. Robert Metcalf was an MIT graduate student who connected MIT computers to ARPANET. At first, there wasn’t much to do in ARPANET beyond transferring data files among its network.</p>
+                <p class = "grw-font">Then a new capability was added, a killer application called E-mail was added which changed the way of communication around the world. Reymond Tomlinson invented the E-mail and he also gave meaning to the ‘@’ symbol. In Oct 1972, ARPANET created the first Sci-fi movie using the internet.</p>
+         <p class = "grw-font">  Soon computer networks were growing Robert Metcalf found out there were 19 different features to work on the internet and soon there were LANs and WANs. LAN (Local Area Networks) which contains all the connections in one building or organization and WAN (Wide Area Networks) which are connected between organizations. But each LAN or organization used its protocols for communications. Because of this, there were difficulties in communicating between people. So, there was a need for a common protocol. </p>
+
+
+
+                <hr class="black">
+
+
+
+
+
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="text-center">
+                    <img class="img-fluid" height="200" width="200" src="{{ url_for('static', filename='images/arpanet.jpg') }}"
+                         alt="image of ARPANET HISTORY MARKER">
+                    <p>ARPANET  MARKER</p>
+
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

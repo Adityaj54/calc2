@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>UNIT TESTING</h1>
+                <p class="grw-font">
+                    Unit testing involves testing individual components of the software program or application. The main purpose behind this is to check that all the individual parts are working as intended. A unit is known as the smallest possible component of software that can be tested. Generally, it has a few inputs and a single output.
+                </p>
+
+
+
+                <br>
+                <h3>ARRANGE-ACT-ASSERT</h3>
+
+
+                <h3 style="padding-left: 20px">ARRANGE</h3>
+                <br>
+                <p class="grw-font">
+                    Arrange inputs and targets. Arrange steps should set up the test case.
+                    Does the test require any objects or special settings? Does it need to prep a database?
+                    Does it need to log into a web app? Handle all of these operations at the start of the test.
+                </p>
+
+
+                <h3 style="padding-left: 20px">ACT</h3>
+                <br>
+                <p class="grw-font">
+                    Act on the target behavior.
+                    Act steps should cover the main thing to be tested. This could be calling a function or method,
+                    calling a REST API, or interacting with a web page. Keep actions focused on the target behavior
+                </p>
+                <h3 style="padding-left: 20px">ASSERT</h3>
+                <br>
+                <p class="grw-font">
+                    	Assert expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.
+                <code>
+
+                    def test_abs_for_a_negative_number():<br>
+
+                    # Arrange<br>
+                    negative = -5<br>
+
+                    # Act<br>
+                    answer = abs(negative)<br>
+
+                    # Assert<br>
+                    assert answer == 5<br>
+
+                </code>
+                </p>
+
+
+<hr >                <br>
+                <h3>BENIFITS</h3>
+                <p class="grw-font">
+                    The main benefit of unit testing. When you add more features to any software, you might need to make changes to the old design and code, and this can be expensive as well as risky. If you use the unit testing methodology, then this can save a lot of time and can make the whole process much faster and easier.
+                </p>
+
+                <br>
+                <h4>Quality of Code</h4>
+                <p class="grw-font">
+                    Unit testing significantly improves code quality. It helps developers to identify the smallest defects that might be present in the units before they go for integration testing.
+                </p>
+
+                <br>
+                <h4>Facilitates Change</h4>
+                <p class="grw-font">
+                    Refactoring the code or updating the system library becomes much easier when you test each component
+                    of the software individually. If there are any problems, they are detected early on and making changes to the system thus becomes much easier. The accuracy of each unit is verified before it moves on to the next phase. This means that the unit is proven to be in proper working order before it’s integrated with other modules.
+                </p>
+
+                <br>
+                <h4>Find Software Bugs Easily</h4>
+                <p class="grw-font">
+                    Unit testing helps identify all kinds of issues with the software at a very early stage. Software developers can then work on those issues first before progressing any further. The main advantage of this is when the issues are resolved at an early stage, no other part of the software is impacted. This leads to increased efficiency, reduced downtime, and reduced costs that would otherwise arise as a result of the whole design process stalling.
+                </p>
+                <br>
+                <h4>Provides Documentation</h4>
+                <p class="grw-font">
+                    Any problems or bugs in the system are identified in the early stages through unit testing, and because of that the cost of bug fixes is significantly reduced. If these bugs are discovered later, then it will be much more expensive to fix them.
+                </p>
+
+                <br>
+                <h4>Reduce Costs</h4>
+                <p class="grw-font">
+                    Any problems or bugs in the system are identified in the early stages through unit testing, and because of that the cost of bug fixes is significantly reduced. If these bugs are discovered later, then it will be much more expensive to fix them.
+
+                    When bugs are detected at the later stages, they are usually the results of many changes that have already been made to the system. If the software has already been developed, finding out the exact code that caused these bugs will be a major problem.
+
+
+                </p>
+
+                <hr >                <br>
+                <h3>EXTERNAL DATA</h3>
+
+                <br>
+                <h4>Load CSV files to Python Pandas</h4>
+                <p class="grw-font">
+                    import pandas as pd
+                    data = pd.read_csv("filename.csv")
+                    The basic process of loading data from a CSV file into a Pandas DataFrame (with all going well) is achieved using the “read_csv” function in Pandas:
+                    The basic process of loading data from a CSV file into a Pandas DataFrame (with all going well) is achieved using the “read_csv” function in Pandas:
+                    While this code seems simple, an understanding of three fundamental concepts is required to fully grasp and debug the operation of the data loading procedure if you run into issues:
+                    <br>1.	Understanding file extensions and file types – what do the letters CSV actually mean? What’s the difference between a .csv file and a .txt file?
+                    <br> 2.	Understanding how data is represented inside CSV files – if you open a CSV file, what does the data actually look like?
+                    <br>3.	Understanding the Python path and how to reference a file – what is the absolute and relative path to the file you are loading? What directory are you working in?
+                    <br>4.	CSV data formats and errors – common errors with the function.
+
+                </p>
+
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="text-center">
+                    <img class="img-fluid" height="200" width="200" src="{{ url_for('static', filename='images/aaa.png') }}"
+                         alt="image of TCPIP STACK">
+                    <p>AAA TESTING</p>
+
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

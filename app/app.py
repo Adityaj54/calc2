@@ -8,7 +8,6 @@ app = Flask(__name__)
 app.secret_key = 'f3cfe9ed8fae309f02079dbf'
 
 @app.route("/")
-
 def index():
     """index  Route Response"""
     return render_template('index.html')
@@ -20,9 +19,13 @@ def basicform():
         #get the values out of the form
         value1 = request.form['value1']
         value2 = request.form['value2']
+        if value1 is '' or value2 is '':
+            flash(f'Enter the Values')
+            return render_template('basicform.html')
         operation = request.form['operation']
         #make the tuple
         my_tuple = (value1, value2)
+
         #this will call the correct operation
         getattr(Calculator, operation)(my_tuple)
         result = str(Calculator.get_last_result_value())
@@ -53,4 +56,34 @@ def good_calc(value1,value2):
 def display_results():
     """bad calc Route Response"""
     return render_template('table.html',values = Results.display_results())
+
+@app.route("/g")
+def glossary():
+    return render_template('glossary.html')
+
+@app.route("/aaa")
+def AAA():
+    return render_template('AAA.html')
+@app.route("/arpanet")
+def arpanet():
+    return render_template('arpanet.html')
+@app.route("/oops")
+def oops():
+    return render_template('oop.html')
+
+@app.route("/tcp")
+def tcp():
+    return render_template('tcpip.html')
+@app.route("/sep")
+def sep():
+    return render_template('seperation.html')
+
+
+
+@app.route("/clear")
+def clear():
+    Results.clear_results()
+    return render_template('table.html')
+
+
 

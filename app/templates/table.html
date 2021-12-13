@@ -4,6 +4,25 @@
     {{ super() }}
 {% endblock %}
 {% block content %}
+<style>input[type=submit] {
+  width: 15%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+<form action="/clear" > <!-- or method="post" -->
+        <input type="submit" value="Clear" >
+    </form>
   <table id="data" class="table table-striped">
     <thead>
       <tr>
@@ -33,11 +52,8 @@
     $(document).ready(function () {
       $('#data').DataTable({
         columns: [
-          null,
-          {searchable: false},
-          {orderable: false, searchable: false},
-          {orderable: false, searchable: false},
-          null],
+
+         ],
       });
     });
   </script>

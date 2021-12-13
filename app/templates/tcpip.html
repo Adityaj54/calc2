@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+      <div class="col-sm-8 text-left">
+        <h1>What is TCP/IP</h1>
+        <p class="grw-font">    In 1973, Dr. Vinton Cerf and Dr. Robert Kahn both developed procedures and rules for message passing and communication between networks called TCP/IP. TCP/IP (Transmission Control Protocol/Internet Protocol) enabled all networks to interconnect since all networks used the same set of protocols. TCP/IP used the concept of the gateway where all networks were connected to this gateway to communicate. TCP/IP also had a reliable data transfer service, if the packets were lost and there is no acknowledgment from the receiver for those packets the sender would resend those packets until it receives an acknowledgment from the receiver.
+        This feature made TCP/IP common protocol for all networks. In 1983 there were many different protocols created by others but, TCP/IP was adopted as a universal standard marking a common network for interconnected networks.
+        <p class="grw-font">           In 1983, “IPv4” was launched by ARPANET.  It is one of the core protocols of internetworking methods in the Internet and other packet-switched networks. In IPv4 to identify the host and to provide the exact location of the host in the network, IPv4 used 32-bit address space which provides 232 unique addresses and the IP address looked something like this “183.201.18.03”. Day-by-day internet became popular and there were so many users and by 1990, the IPv4 address space seemed to exhaust. So, IETF (Internet Engineering Task Force) decided to explore new technologies to expand the addressing capability of the internet and they redesigned the current version of IP which is known as IPv6. In IPv6 they increased the addressing space to 2128 which was 4 times more than IPv4. At present, there are both IPv4 and IPv6 addresses in use, and both of these are used hand in hand using tunneling where IPv6 packets are encapsulated under IPv4 to pass through the IPv4 network.</p>
+
+
+        <hr class="black">
+
+
+
+
+
+      </div>
+      <div class="col-sm-2 sidenav">
+        <div class="text-center">
+          <img class="img-fluid" height="200" width="200" src="{{ url_for('static', filename='images/tcpip.svg') }}"
+               alt="image of TCPIP STACK">
+          <p>TCPIP STACK</p>
+
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

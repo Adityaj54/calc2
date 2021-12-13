@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid text-center">
+
+
+        <div class="row content">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-sm-2 sidenav">
+
+
+                <p><a href="/g">TIPS PYLINT/GLOSSARY</a></p>
+                <p><a href="/aaa">AAA TESTING</a></p>
+                <p><a href="/oop">OOPS CONCEPTS</a></p>
+                <p><a href="/sep">SEPARATION OF CONCERNS</a></p>
+
+                <p><a href="/tcp">TCP/IP</a></p>
+                <p><b><a href="/arpanet">ARPANET</a></b></p>
+
+
+                <hr class="black">
+                <!--<p><a class="btn btn-first" href="">Get Video</a></p>
+                <p><a class="btn btn-second" href="">Subscribe Us</a></p>-->
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <h1>SEPERATION OF CONCERNS</h1>
+                <p class="grw-font">     Separation of concerns is a software architecture design pattern/principle for separating an application into distinct sections, so each section addresses a separate concern. At its essence, Separation of concerns is about order.
+
+
+                </p>
+                <hr class="black">
+
+
+                <br>
+                <h3>Seperation of Concerns in Calculator Program</h3>
+
+                <br>
+                <p class="grw-font">
+
+
+
+                    <br>  The Seperation of Concerns concept is used in the Calculator program in such a way that the class calculator
+                    is divided into seperate classes like addition, subtraction, multiplication and division.
+                    <br> The class calculation in the program Calculation has the declaration of the object and the variables and the class is used as a parameters to the other classes
+                    like addition, subtraction, multiplication and division.
+                    <br>  The program Calculator_test is used to write the custom test cases for the calculator.
+                    <br>The program Main is used to define the methods for the operations of the calculator.
+                    <br> The program Addition is used to perform the addition operation.
+                    <br>The program Subtraction is used to perform the subtraction operation.
+                    <br>The program Multiplication is used to perform the multiplication operation.
+                    <br> The program Division is used to perform the division operation.
+                    <br> THe program Calculator is used to declare the methods and print the end result of the calculator.
+
+
+
+                </p>
+
+
+
+
+
+
+            </div>
+            <div class="col-sm-2 sidenav">
+                <div class="text-center">
+                    <img class="img-fluid" height="200" width="200" src="{{ url_for('static', filename='images/sep.webp') }}"
+                         alt="image of TCPIP STACK">
+                    <p>DESIGN PATTERNS</p>
+
+
+                </div>
+            </div>
+        </div>
+{% endblock %}

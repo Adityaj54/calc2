@@ -14,6 +14,11 @@ class Results:
                 list_res.append(line.split(','))
             return list_res
 
+    @staticmethod
+    def clear_results():
+        with open('result.txt','r+') as f:
+            f.truncate(0)
+
 
 
 

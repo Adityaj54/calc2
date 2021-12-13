@@ -1,6 +1,0 @@
-1,2,3.0,add_numbers
-1,3,4.0,add_numbers
-1,3,3.0,multiply_numbers
-4,2,2.0,divide_numbers
-4,0,float division by zero,divide_numbers
-1,2,3.0,add_numbers

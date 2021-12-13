@@ -1,0 +1,87 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+    width: auto;
+    height: 650px;
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+h5 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+
+@media (min-width: 313px) {
+    .hero-text {
+        width: 550px;
+        height: 300px;
+        top: 500px;
+        padding-top: 10px;
+        left: 50%;
+        color: white;
+    }
+}
+@media (max-width: 576px) {
+    .hero-text {
+        width: 550px;
+        height: 300px;
+        top: 230px;
+        padding-top: 10px;
+        left: 50%;
+        color: white;
+    }
+}
+@media (min-width: 575px) {
+    .hero-text {
+        width: 550px;
+        height: 300px;
+        top: 350px;
+        padding-top: 10px;
+        left: 50%;
+        color: white;
+        position: absolute;
+    }
+}
+
+
