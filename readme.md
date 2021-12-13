@@ -1,7 +1,10 @@
 # Calculator Project Setup
 
 
-![Screenshot](tables.PNG)
+# LINK TO VIDEO
+
+https://youtu.be/6JXO4ME1z6s
+
 
 ![Screenshot](1.PNG)
 
