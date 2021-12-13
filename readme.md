@@ -1,9 +1,9 @@
 # Calculator Project Setup
 
 
-# LINK TO VIDEO
+### LINK TO VIDEO https://youtu.be/6JXO4ME1z6s
 
-https://youtu.be/6JXO4ME1z6s
+
 
 
 ![Screenshot](1.PNG)
