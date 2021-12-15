@@ -8,6 +8,8 @@ To run tests, Lint, and Coverage report use this command:
 
 pytest  --pylint --cov
 
+![Screenshot](flask.PNG)
+
 ![Screenshot](1.PNG)
 
 ![Screenshot](2.PNG)
